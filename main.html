@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background: silver;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            text-align: center;
+            margin-top: 7%;
+        }
+        #slider{
+            width: 50%;
+            border: 1px solid red;
+            top: 50%;
+            position: absolute;
+            margin-top: -200px;
+            height: 550px;
+            overflow: hidden;
+        }
+        #slider ul {
+            height: 500px;
+            left: 50%;
+            width: 6000px;
+            margin-left: -330px;
+            position: absolute;
+            margin-top: 50px;
+            border: 2px solid green;
+        }
+        #slider ul li{
+            float: left;
+            margin-left: 84px;
+            margin-top: 2px;
+            opacity: 0.3;
+        }
+        #slider dl#frame{
+            border: 3px solid #ff8400;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 600px;
+            box-sizing: content-box;
+            height: 500px;
+            margin: -250px 0 0 -300px;
+        }
+        #slider dl#frame dt{
+            height: 350px;
+        }
+        #slider dl#frame dd{
+            height: 150px;
+            background: url(./img/service/cover.jpg) no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 15px;
+        }
+        #slider dl#frame dd h3{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        #slider dl#frame dd p{
+            line-height: 21px;
+        }
+    </style>
+</head>
+<body>
+    <h2><img src="./img/service/title.png" alt=""></h2>
+    <div id="particle">
+        <img src="./img/service/obje1.png">
+        <img src="./img/service/obje2.png">
+        <img src="./img/service/obje3.png">
+        <img src="./img/service/obje4.png">
+        <img src="./img/service/obje5.png">
+    </div>
+    <div id="slider">
+        <ul>
+            <li>
+                <a href="#" title="브런치" data-info="우리 펜션은 고급 브런치를 제공하고 있습니다. 최상의 재료들로 만듭니다."></a>
+                <img src="./img/service/img1.jpg" alt="">
+                <!-- data는? 사용자가 속성을 지정해서 사용할 수 있다.-->
+            </li>
+            <li>
+                <a href="#" title="바베큐" data-info="우리 펜션은 바베큐를 즐길 수 있습니다. 가족, 연인, 친구들과 함께 즐겨보세요."></a>
+                <img src="./img/service/img2.jpg" alt="">
+                
+            </li>
+            <li>
+                <a href="#" title="물놀이" data-info="우리 펜션은 물놀이를 할 수 있는 도구도 제공합니다. 오셔서 맘 껏 이용하세요."></a>
+                <img src="./img/service/img3.jpg" alt="">
+                
+            </li>
+        </ul>
+        <dl id="frame">
+            <dt></dt>
+            <dd>
+                <h3>브런치</h3>
+                <p>우리 펜션은 고급 브런치를 제공하고 있습니다. 최상의 재료들로 만듭니다.</p>
+            </dd>
+        </dl>
+        <button id="btnLeft"><a href="#"><img src="./img/service/ar_L.png" alt=""></a></button>
+        <button id="btnRight"><a href="#"><img src="./img/service/ar_R.png" alt=""></a></button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

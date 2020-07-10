@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2><img src="./img/service/title.png" alt=""></h2>
+    <div id="particle">
+        <img src="./img/service/obje1.png">
+        <img src="./img/service/obje2.png">
+        <img src="./img/service/obje3.png">
+        <img src="./img/service/obje4.png">
+        <img src="./img/service/obje5.png">
+    </div>
+    <div id="slider">
+        <ul>
+            <li>
+                <a href="#" title="수영장" data-info="우리 펜션은수영장이 있습니다. 좋은 수질로 제공하오니 오셔서 신나게 놀다 가세요."></a>
+                <img src="./img/service/img1.jpg" alt="">
+                <!-- data는? 사용자가 속성을 지정해서 사용할 수 있다.-->
+            </li>
+            <li>
+                <a href="#" title="족구장" data-info="우리 펜션은 족구장이 있습니다. 오셔서 족구를 즐겨보세요."></a>
+                <img src="./img/service/img2.jpg" alt="">
+                
+            </li>
+            <li>
+                <a href="#" title="바베큐" data-info="우리 펜션은 바베큐를 즐길 수 있습니다. 가족, 연인, 친구들과 함께 즐겨보세요."></a>
+                <img src="./img/service/img2.jpg" alt="">
+                
+            </li>
+            
+            <li>
+                <a href="#" title="트렘폴린" data-info="아이들이 좋아하는 트렘폴린이 비치되어 있습니다 어른들도 함께 즐기실 수 있습니다.">
+                </a>
+            <img src="./img/service/img4.jpg" alt="">
+            </li>
+            <li>
+                <a href="#" title="야외테라스" data-info="테라스가 있어서 청정공기를 느끼 실 수 있습니다.">
+                </a>
+            <img src="./img/service/img5.jpg" alt="">
+            </li>
+            <li>
+                <a href="#" title="어린이영화관" data-info="어린이들만의 영화관이 준비되어있습니다 아이들에게 유익한 시청각 시간을 보낼 수 있습니다.">
+                </a>
+            <img src="./img/service/img6.jpg" alt="">
+            </li>
+            <li>
+                <a href="#" title="탁구장" data-info="오랜만에 탁구 한 판하면서 건강한 스포츠로 몸도 마음도 건강하게!">
+                </a>
+            <img src="./img/service/img7.jpg" alt="">
+            </li>
+            <li>
+                <a href="#" title="게임장" data-info="게임장이 준비되어이있습니다.">
+                </a>
+            <img src="./img/service/img8.jpg" alt="">
+            </li>
+        </ul>
+        
+        <dl id="frame">
+            <dt></dt>
+            <dd>
+                <h3>수영장</h3>
+                <p>우리 펜션은수영장이 있습니다. 좋은 수질로 제공하오니 오셔서 신나게 놀다 가세요.</p>
+            </dd>
+        </dl>
+        <button id="btnLeft"><a href="#"><img src="./img/service/ar_L.png" alt=""></a></button>
+        <button id="btnRight"><a href="#"><img src="./img/service/ar_R.png" alt=""></a></button>
+    </div>
+    
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    
+	<script>
+
+$(function(){
+	var scaleNum = 0;
+	$("#slider ul li").eq(0).addClass("scaleUp");
+    
+     $("button#btnLeft").click(function(){
+	 	if(scaleNum > 0) {
+	 		$("#slider ul").stop().animate({marginLeft:"+=584"},function(){
+
+	 			$("#slider ul li").eq(scaleNum).removeClass("scaleUp");
+	 			scaleNum--;
+	 			$("#slider ul li").eq(scaleNum).addClass("scaleUp");
+	 			 var title = $("a","#slider ul li").eq(scaleNum).attr("title");
+	 			 $("#frame dd h3").html(title);
+	 			 var desc = $("a","#slider ul li").eq(scaleNum).attr("data-info");
+	 			 $("#frame dd p").html(desc);
+	 			});
+
+	 	}
+	 });
+	 $("button#btnRight").click(function(){
+	 	if(scaleNum <= 1) {
+	 		$("#slider ul").stop().animate({marginLeft:"-=584"},function(){
+	
+	 		$("#slider ul li").eq(scaleNum).removeClass("scaleUp");
+	 		scaleNum++;
+	 		$("#slider ul li").eq(scaleNum).addClass("scaleUp");
+	 		 var title = $("a","#slider ul li").eq(scaleNum).attr("title");
+	 		 	$("#frame dd h3").html(title);
+	 		 	var desc = $("a","#slider ul li").eq(scaleNum).attr("data-info");
+	 		 	$("#frame dd p").html(desc);
+	 		});
+	 	}
+	 });
+     
+	$("body").on("mousemove",function(e){
+		w = $(this).width();
+		h = $(this).height();
+		x = 20 * Math.ceil(e.pageX / w * 100) / 100;
+		y = 20 * Math.ceil(e.pageY / h * 100) / 100;
+		$("#particle img").eq(0).css({marginLeft:-x,marginTop:-y});
+		$("#particle img").eq(1).css({marginLeft:-x * 3,marginTop:-y * 3});
+		$("#particle img").eq(2).css({marginLeft:x * 2,marginTop:y * 1});
+		$("#particle img").eq(3).css({marginLeft:-x * 4,marginTop:-y * 4});
+		$("#particle img").eq(4).css({marginLeft:x * 4,marginTop:y * 4});
+	});
+})
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

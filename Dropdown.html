@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+            
+        }
+        .contents{
+            display: none;
+            position: absolute;
+            /*border: 1px solid black;*/
+            text-align: center;
+           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .human{
+            width: 300px;
+        }
+        .dropdown:hover .contents{
+            display: block
+        }
+    </style>
+</head>
+<body>
+    <h2>Dropdown Image</h2>
+    <div class="dropdown">
+    <img src="human_15.gif" alt="">
+    <div class="contents">
+         <img src="human_15.gif" alt="" class="human">
+         <p>Beautiful world!</p>
+    </div>
+    </div>
+  
+    
+    
+    
+</body>
+</html>

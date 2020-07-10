@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background: url(./img/p2_bg.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        img{
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+        .img1{
+            width: 49.1%;
+            max-width: 688px;
+            top: 40%;
+            left: -40%;
+           
+        }
+        .img2{
+            width: 49.1%;
+            max-width: 688px;
+            top: 60%;
+           
+        }
+        .insertLogo{
+            animation: insertLogo 2s forwards;
+        }
+        .insertStrip{
+            animation: insertStrip 2s forwards;
+            animation-delay: 2s;
+        }
+        @keyframes insertLogo{
+            0%{
+                left: -100%;
+                top: 50%;
+                margin-top: -150px;
+            }
+            100%{
+               left: 0%; 
+                top: 50%;
+                margin-top: -150px;
+             
+            }
+        }
+        @keyframes insertStrip{
+            0%{}
+            100%{
+                top: 50%;
+                margin-top: 150px;
+               
+            }
+        }
+        #orangebox{
+            background: rgba(255,132,0,0.8);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: -100%;
+            z-index: -5;
+            animation: orangeBox 3s forwards;
+        }
+        @keyframes orangeBox{
+            0%{}
+            100%{ transform: translate(0,100%);}
+        }
+    </style>
+</head>
+<body>
+    <img class="img1 insertLogo" src="./img/logo1.png" alt="">
+    <img class="img2 insertStrip" src="./img/strapline.png" alt="">
+    <div id="orangebox"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

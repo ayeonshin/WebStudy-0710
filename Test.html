@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            padding: 30px;
+            color: black;
+            font-size: 25px;
+        }
+        .div-ul{
+            background: gray;
+            width: 860px;
+            height: 100vh;
+        }
+        li:hover{
+            background: yellow;
+        }
+        .active{
+            background: green;
+            color: white;
+        }
+        /*a:hover:not(.active){
+
+        }*/
+        h1{
+            padding: 15px 30px;
+        }
+        p{
+            padding: 15px 30px;
+        }
+        .lorem{
+            font-weight: bold;
+            font-size: 30px
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="div-ul">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+    <div>
+        <h1>Test</h1>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores magnam, excepturi voluptate voluptas debitis cumque. Eos laborum eligendi vel non fugit, consectetur modi nesciunt voluptas quos iusto totam at nam.</p>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ullam laboriosam dicta laborum delectus recusandae eligendi molestiae excepturi eum accusamus nam blanditiis quis at reiciendis soluta, voluptates? Dolor, dicta, impedit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+    </div>
+  </div>    
+</body>
+</html>
